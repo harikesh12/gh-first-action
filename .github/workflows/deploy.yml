@@ -1,5 +1,6 @@
 name: Deploy Project
-on: push
+# to add multiple workflows
+on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,6 +16,7 @@ jobs:
       - name: Run tests
         run: npm test
   deploy:
+# By default jobs run in parallel but we can make them sequential by using below commands. 
     needs: test
     runs-on: ubuntu-latest
     steps:
