@@ -16,11 +16,11 @@ jobs:
       - name: install dependencies
         run: npm ci
 
-      # # Install ESLint and vitest
-      # - run: |
-      #    npm install -g eslint
-      #    npm install -g vitest
-      #    npm install -g vite
+      # Install ESLint and vitest
+      - run: |
+         npm install -g eslint
+         npm install -g vitest
+        #  npm install -g vite
 
       - name: to perform linting
         run: npm run lint
