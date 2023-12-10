@@ -16,9 +16,9 @@ jobs:
       - name: install dependencies
         run: npm ci
 
-      # Run ESLint
-      - uses: eslint/github-action@v0
-      
+      # # Run ESLint
+      # - uses: eslint/github-action@v0
+
       - name: to perform linting
         run: eslint --ext .jsx --fix src
       - name: To test code
