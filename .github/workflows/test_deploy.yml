@@ -17,7 +17,7 @@ jobs:
         run: npm ci
 
       # # Run ESLint
-      # - uses: eslint/github-action@v0
+      - run: npm install -g eslint
 
       - name: to perform linting
         run: eslint --ext .jsx --fix src
