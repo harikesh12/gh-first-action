@@ -11,8 +11,8 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - event  #  main
-      - 'dev-*' # dev-new dev-this-is-new
+      - dev  #  main
+      - 'event-*' # dev-new dev-this-is-new
       - 'event/**' # feat/new feat/new/button
     paths-ignore:
       - '.github/workflows/*' 
