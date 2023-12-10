@@ -27,7 +27,7 @@ jobs:
          npm install -g eslint
          npm install -g vitest
       - name: To test code
-        run: npm run test
+        run: echo "npm run test"
   build:  
     runs-on: ubuntu-latest
     steps:

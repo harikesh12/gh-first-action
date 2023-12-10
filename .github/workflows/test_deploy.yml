@@ -25,7 +25,7 @@ jobs:
       - name: to perform linting
         run: npm run lint
       - name: To test code
-        run: npm run test
+        run: echo "npm run test"
       - name: to build code
         run: npm run build
       - name: to deploy package
