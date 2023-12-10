@@ -1,4 +1,4 @@
-name: print issues details
+name: print issue details
 on: issues
 jobs:
   output-info:
