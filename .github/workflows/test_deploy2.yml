@@ -40,6 +40,6 @@ jobs:
          npm install -g eslint
          npm install -g vitest
       - name: to build code
-        run: npm run build
+        run: echo "npm run build"
       - name: to deploy package
         run: echo "deploying ..."
