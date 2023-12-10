@@ -16,8 +16,11 @@ jobs:
       - name: install dependencies
         run: npm ci
 
-      # # Run ESLint
-      - run: npm install -g eslint
+      # # Install ESLint and vitest
+      - run: |
+         npm install -g eslint
+         npm install -g vitest
+         npm install -g vite
 
       - name: to perform linting
         run: eslint --ext .jsx --fix src
