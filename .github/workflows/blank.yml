@@ -1,0 +1,12 @@
+name: first workflow
+# Manual trigger for this Github action
+on: workflow_dispatch
+jobs:
+  first-job:
+  # on which os it will run https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners
+    runs-on: ubuntu-20.04
+    steps:
+      - name: print greeting
+        run: echo "Hello world !"
+      - name: print goodbye
+        run: echo "done- bye !"
