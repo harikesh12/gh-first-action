@@ -1,31 +1,34 @@
 name: testing and deployment
 on: push
 jobs:
-  testing:
+  lint:
+   runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      # Install your dependencies
+      - name: install dependencies
+        run: npm ci
+      - name: to perform linting
+        run: npm run lint
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: get code
         uses: actions/checkout@v3
-         # Install Node.js
-      - name: install node js 
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
       # Install your dependencies
       - name: install dependencies
         run: npm ci
-
-      # # Install ESLint and vitest
-      # - run: |
-      #    npm install -g eslint
-      #    npm install -g vitest
-      #    npm install -g vite
-
-      - name: to perform linting
-        run: npm run lint
       - name: To test code
         run: npm run test
+  build:  
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      # Install your dependencies
+      - name: install dependencies
+        run: npm ci
       - name: to build code
         run: npm run build
       - name: to deploy package
