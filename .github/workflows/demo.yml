@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - artifact
+      - output
 jobs:
   test:
     runs-on: ubuntu-latest
